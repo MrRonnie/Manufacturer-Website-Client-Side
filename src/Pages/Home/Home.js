@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Shared/Footer";
 import Banner from "./Banner";
 import BusinessSummary from "./BusinessSummary";
 import ContactUs from "./ContactUs";
@@ -13,6 +14,7 @@ const Home = () => {
       <Info></Info>
       <MidCard></MidCard>
       <ContactUs></ContactUs>
+      <Footer></Footer>
     </div>
   );
 };
