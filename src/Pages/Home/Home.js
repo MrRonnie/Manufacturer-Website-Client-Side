@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "./Banner";
+import ContactUs from "./ContactUs";
 import Info from "./Info";
 import MidCard from "./MidCard";
 
@@ -9,6 +10,7 @@ const Home = () => {
       <Banner></Banner>
       <Info></Info>
       <MidCard></MidCard>
+      <ContactUs></ContactUs>
     </div>
   );
 };
