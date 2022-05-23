@@ -17,6 +17,10 @@ const Banner = () => {
           <h1 class="text-white text-2xl font-semibold uppercase md:text-3xl">
             Build Your new <span class=" text-blue-400">Masterpiece</span>
           </h1>
+          <p className="mt-2 text-lg text-white">
+            Life is a masterpiece that you create. Your soul is your paintbrush,
+            your world is your canvass, your life is your masterpiece.
+          </p>
           <button class="mt-4 px-4 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
             <Link to="/">Start Now</Link>
           </button>
