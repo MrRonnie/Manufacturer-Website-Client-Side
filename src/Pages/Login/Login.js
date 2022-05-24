@@ -85,6 +85,12 @@ const Login = () => {
             <div class="form-control w-full max-w-xs">
               <label class="label">
                 <span class="label-text">Password</span>
+                <Link
+                  to="/resetPassword"
+                  className="ml-auto text-sm  text-secondary hover:text-blue-500 cursor-pointer"
+                >
+                  Forget Password?
+                </Link>
               </label>
               <input
                 type="password"

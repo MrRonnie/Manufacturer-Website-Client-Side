@@ -6,22 +6,22 @@ import phone from "../../assets/icons/phone.svg";
 
 const Info = () => {
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
       <InfoCard
         cardTitle="Opening Hours"
-        cardDetail="Open Everyday 11:00 AM to 7:00 PM"
+        cardDetail="Open Everyday 10:00 AM to 7:00 PM"
         bgClass=" bg-gradient-to-r from-secondary to-primary"
         img={clock}
       ></InfoCard>
       <InfoCard
         cardTitle="Visit our location"
-        cardDetail="Brooklyn, NY 10036, United States"
+        cardDetail="Brooklyn, NY 10096, United States"
         bgClass="bg-accent"
         img={marker}
       ></InfoCard>
       <InfoCard
         cardTitle="Contact Us"
-        cardDetail="+000 123 456789"
+        cardDetail="+009 123 456789"
         bgClass=" bg-gradient-to-r from-secondary to-primary"
         img={phone}
       ></InfoCard>
