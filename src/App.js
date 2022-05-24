@@ -7,6 +7,8 @@ import Blogs from "./Pages/Blogs/Blogs";
 import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/Login/SignUp";
 import ResetPassword from "./Pages/Login/ResetPassword";
+import { ToastContainer } from "react-toastify";
+import NotFound from "./Pages/Shared/NotFound";
 
 function App() {
   return (
@@ -19,7 +21,10 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="resetPassword" element={<ResetPassword />} />
         <Route path="signup" element={<SignUp />} />
+        a
+        <Route path="*" element={<NotFound />} />
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
