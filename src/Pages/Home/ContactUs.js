@@ -12,7 +12,7 @@ const ContactUs = () => {
       className="bg-primary px-10 py-10 rounded "
     >
       <div className="text-center pb-14 text-white">
-        <p className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-accent to-secondary">
+        <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-secondary to-secondary">
           Contact Us
         </p>
         <h1 className="text-4xl">Stay connected with us</h1>

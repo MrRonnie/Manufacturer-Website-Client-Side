@@ -4,7 +4,9 @@ const BusinessSummary = () => {
   return (
     <section className="mt-10 py-10">
       <div>
-        <h2 className="text-3xl font-semibold text-center">Business Summary</h2>
+        <h2 className="text-4xl font-bold text-secondary text-center">
+          Business Summary
+        </h2>
       </div>
       <div className="divider rounded-lg w-52 mx-auto"></div>
       <div className="stats shadow stats-vertical lg:stats-horizontal  w-full mx-auto mt-5">
