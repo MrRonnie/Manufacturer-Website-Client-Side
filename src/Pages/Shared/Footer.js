@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import footer from "../../assets/images/footer.png";
 
 const Footer = () => {
@@ -10,6 +11,7 @@ const Footer = () => {
       }}
       className="pt-24"
     >
+      <div className="divider rounded-lg w-96 mb-5 mx-auto"></div>
       <div className="footer  justify-around">
         <div>
           <span className="footer-title">Services</span>
@@ -22,8 +24,12 @@ const Footer = () => {
           <span className="footer-title">Company</span>
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <a className="link link-hover">
+            <Link to="/blogs">Blogs</Link>
+          </a>
+          <a className="link link-hover">
+            <Link to="/">Home</Link>
+          </a>
         </div>
         <div>
           <span className="footer-title">Legal</span>
