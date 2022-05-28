@@ -5,11 +5,13 @@ import BusinessSummary from "./BusinessSummary";
 import ContactUs from "./ContactUs";
 import Info from "./Info";
 import MidCard from "./MidCard";
+import Products from "./Products";
 
 const Home = () => {
   return (
     <div>
       <Banner></Banner>
+      <Products></Products>
       <BusinessSummary></BusinessSummary>
       <MidCard></MidCard>
       <ContactUs></ContactUs>

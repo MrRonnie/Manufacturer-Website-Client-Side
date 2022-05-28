@@ -21,7 +21,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="resetPassword" element={<ResetPassword />} />
         <Route path="signup" element={<SignUp />} />
-        a
+
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer />
