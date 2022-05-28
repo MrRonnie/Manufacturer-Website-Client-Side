@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import { useQuery } from "react-query";
-import Loading from "../Pages/Shared/Loading";
 
 const useAllProducts = (dependency) => {
   const [products, setProducts] = useState([]);

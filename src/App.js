@@ -9,6 +9,8 @@ import SignUp from "./Pages/Login/SignUp";
 import ResetPassword from "./Pages/Login/ResetPassword";
 import { ToastContainer } from "react-toastify";
 import NotFound from "./Pages/Shared/NotFound";
+import RequireAuth from "./Pages/Shared/RequireAuth";
+import Purchase from "./Pages/Checkout/Purchase";
 
 function App() {
   return (
@@ -21,6 +23,15 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="resetPassword" element={<ResetPassword />} />
         <Route path="signup" element={<SignUp />} />
+
+        <Route
+          path="/purchase/:id"
+          element={
+            <RequireAuth>
+              <Purchase></Purchase>
+            </RequireAuth>
+          }
+        />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
