@@ -28,6 +28,13 @@ const Blogs = () => {
         </h2>
         <p className="text-gray-500">
           <span className="font-bold mr-3">Ans:</span>
+          Optimizing application performance is key for developers who are
+          mindful of keeping a users experience positive to keep them on an app
+          and engaged. <br /> • Keeping component state local where necessary{" "}
+          <br /> • Memorizing React components to prevent unnecessary re-renders{" "}
+          <br /> • Code-splitting in React using dynamic import () <br /> •
+          Windowing or list virtualization in React <br /> • Lazy loading images
+          in React
         </p>
       </div>
       <div className="shadow-sm rounded-lg border p-4 mb-8">
@@ -38,6 +45,21 @@ const Blogs = () => {
         </h2>
         <p className="text-gray-500">
           <span className="font-bold mr-3">Ans:</span>
+          There are four main types of state we need to properly manage in your
+          React apps: <br /> <br />
+          #1 Local state - Local state is data we manage in one or another
+          component. Local state is most often managed in React using the
+          useState hook. <br />
+          #2 Global state - Global state is data we manage across multiple
+          components. Global state is necessary when we want to get and update
+          data anywhere in our app, or in multiple components at least. <br />
+          #3 Server state - Data that comes from an external server that must be
+          integrated with our UI state. Server state is a simple concept, but
+          can be hard to manage alongside all of our local and global UI state{" "}
+          <br />
+          #4 URL state - Data that exists on our URLs, including the pathname
+          and query parameters. URL state is often missing as a category of
+          state, but it is an important one.
         </p>
       </div>
       <div className="shadow-sm rounded-lg border p-4 mb-8">
@@ -48,6 +70,15 @@ const Blogs = () => {
         </h2>
         <p className="text-gray-500">
           <span className="font-bold mr-3">Ans:</span>
+          Prototype-based programming is a style of object-oriented programming
+          in which behavior reuse (known as inheritance) is performed via a
+          process of reusing existing objects that serve as prototypes. This
+          model can also be known as prototypal, prototype-oriented, classless,
+          or instance-based programming. The Prototypal Inheritance is a feature
+          in JavaScript used to add methods and properties in objects. It is a
+          method by which an object can inherit the properties and methods of
+          another object. Traditionally, in order to get and set the
+          [[Prototype]] of an object, we use Object. getPrototypeOf and Object.
         </p>
       </div>
       <div className="shadow-sm rounded-lg border p-4 mb-8">
@@ -60,6 +91,12 @@ const Blogs = () => {
         </h2>
         <p className="text-gray-500">
           <span className="font-bold mr-3">Ans:</span>
+          It declares a “state variable”. Our variable is called count but we
+          could call it anything else, like banana. This is a way to “preserve”
+          some values between the function calls — useState is a new way to use
+          the exact same capabilities that this.state provides in a class.
+          Normally, variables “disappear” when the function exits but state
+          variables are preserved by React.
         </p>
       </div>
       <div className="shadow-sm rounded-lg border p-4 mb-8">
@@ -81,6 +118,28 @@ const Blogs = () => {
         </h2>
         <p className="text-gray-500">
           <span className="font-bold mr-3">Ans:</span>
+          Unit testing is a type of software testing where individual units or
+          components of a software are tested. The purpose is to validate that
+          each unit of the software code performs as expected. Unit Testing is
+          done during the development (coding phase) of an application by the
+          developers. Unit Tests isolate a section of code and verify its
+          correctness. A unit may be an individual function, method, procedure,
+          module, or object. Unit Testing is important because software
+          developers sometimes try saving time doing minimal unit testing and
+          this is myth because inappropriate unit testing leads to high cost
+          Defect fixing during System Testing, Integration Testing and even Beta
+          Testing after application is built. If proper unit testing is done in
+          early development, then it saves time and money in the end. <br />{" "}
+          <br />
+          Here, are the key reasons to perform unit testing in software
+          engineering: <br /> <br />
+          • Unit tests help to fix bugs early in the development cycle and save
+          costs. <br />
+          • It helps the developers to understand the testing code base and
+          enables them to make changes quickly <br />
+          • Good unit tests serve as project documentation <br />• Unit tests
+          help with code re-use. Migrate both your code and your tests to your
+          new project. Tweak the code until the tests run again.
         </p>
       </div>
 

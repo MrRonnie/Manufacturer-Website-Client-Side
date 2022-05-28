@@ -6,7 +6,7 @@ import PrimaryButton from "./PrimaryButton";
 const NotFound = () => {
   return (
     <div>
-      <div className="mt-8 text-center bg-white">
+      <div className="mt-10 text-center bg-white">
         <h1 className="text-accent  text-8xl">
           4<span className="text-gray-500">0</span>4
         </h1>
@@ -17,7 +17,7 @@ const NotFound = () => {
           <PrimaryButton>Go to homepage</PrimaryButton>
         </Link>
 
-        <div className="w-max mx-auto flex justify-center">
+        <div className="w-full mx-auto flex justify-center">
           <img src={dribbble} alt="" />
         </div>
       </div>

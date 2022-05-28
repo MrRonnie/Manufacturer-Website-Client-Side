@@ -1,5 +1,4 @@
 import { signOut } from "firebase/auth";
-import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
@@ -27,6 +26,7 @@ const Navbar = () => {
       <li>
         <Link to="/about">About</Link>
       </li>
+
       <li>
         {user ? (
           <button class="btn btn-ghost" onClick={logout}>
@@ -39,7 +39,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar flex-wrap lg:justify-around sm:justify-around">
+    <div className="navbar flex-wrap lg:justify-around sm:justify-start  md:justify-start">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">
