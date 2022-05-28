@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
 
 const Navbar = () => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   const logout = () => {
     signOut(auth);
@@ -29,9 +29,14 @@ const Navbar = () => {
 
       <li>
         {user ? (
-          <button class="btn btn-ghost" onClick={logout}>
-            Sing Out
-          </button>
+          <>
+            <button class="btn btn-ghost" onClick={logout}>
+              Sing Out
+            </button>
+            <li className="text-white my-auto mx-3 bg-secondary lg:px-2 lg:py-1 rounded-lg text-center ">
+              {user.displayName}
+            </li>
+          </>
         ) : (
           <Link to="/login">Login</Link>
         )}

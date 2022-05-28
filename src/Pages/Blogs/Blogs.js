@@ -108,6 +108,12 @@ const Blogs = () => {
         </h2>
         <p className="text-gray-500">
           <span className="font-bold mr-3">Ans:</span>
+          First I will run a loop on the array. after that I will use the
+          includes() method to extract the products that have the search word in
+          the product.name property. Then I will push those extracted product
+          objects to a new array and return it. To ease the searching process we
+          can use toLowerCase() method for both the search word and the
+          product.name .
         </p>
       </div>
       <div className="shadow-sm rounded-lg border p-4 mb-8">
