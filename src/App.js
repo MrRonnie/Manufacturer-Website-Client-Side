@@ -20,6 +20,7 @@ import ManageProducts from "./Pages/Dashboard/ManageProducts";
 import AddReview from "./Pages/Dashboard/AddReview";
 import Payment from "./Pages/Payment/Payment";
 import { ToastContainer } from "react-toastify";
+import Portfolio from "./Pages/Portfolio/Portfolio";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
+        <Route path="portfolio" element={<Portfolio />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="login" element={<Login />} />
         <Route path="resetPassword" element={<ResetPassword />} />

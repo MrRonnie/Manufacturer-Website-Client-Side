@@ -18,7 +18,7 @@ const Navbar = () => {
         <Link to="/blogs">Blogs</Link>
       </li>
       <li>
-        <Link to="/review">Review</Link>
+        <Link to="/portfolio">Portfolio</Link>
       </li>
 
       {user && (
@@ -83,13 +83,18 @@ const Navbar = () => {
       <div className="navbar-end lg:hidden">
         <label htmlFor="drawer" className=" drawer-button lg:hidden">
           <svg
-            className="swap-off fill-current"
             xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 512 512"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h8m-8 6h16"
+            />
           </svg>
         </label>
       </div>
