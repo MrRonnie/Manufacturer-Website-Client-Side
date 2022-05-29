@@ -11,12 +11,12 @@ const AddAProduct = () => {
     const available = parseInt(e.target.available?.value);
     const price = parseInt(e.target.price?.value);
 
+    //   For storage image in third party storage imgBB
+    const imgStorageKey = "9c6876786806d3dbb028b047daea8168";
+
     const formData = new FormData();
     formData.append("image", image);
-    const url = `https://api.imgbb.com/1/upload?key=`;
-
-    // get a key for putting at the end of the url form imagebb website and paste it after key=
-    // example -  `https://api.imgbb.com/1/upload?key=65465465464654654654654654564`
+    const url = `https://api.imgbb.com/1/upload?key=${imgStorageKey}`;
 
     fetch(url, {
       method: "POST",

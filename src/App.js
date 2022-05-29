@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./Pages/Shared/Navbar";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
@@ -7,7 +7,6 @@ import Blogs from "./Pages/Blogs/Blogs";
 import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/Login/SignUp";
 import ResetPassword from "./Pages/Login/ResetPassword";
-import { ToastContainer } from "react-toastify";
 import NotFound from "./Pages/Shared/NotFound";
 import RequireAuth from "./Pages/Shared/RequireAuth";
 import Purchase from "./Pages/Checkout/Purchase";
@@ -19,6 +18,8 @@ import AddAProduct from "./Pages/Dashboard/AddAProduct";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
 import ManageProducts from "./Pages/Dashboard/ManageProducts";
 import AddReview from "./Pages/Dashboard/AddReview";
+import Payment from "./Pages/Payment/Payment";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -41,6 +42,15 @@ function App() {
           }
         />
 
+        <Route
+          path="/payment/:id"
+          element={
+            <RequireAuth>
+              <Payment></Payment>
+            </RequireAuth>
+          }
+        />
+
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<MyProfile />}></Route>
           <Route path="myorders" element={<MyOrders />}></Route>
@@ -54,7 +64,8 @@ function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <ToastContainer />
+
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
