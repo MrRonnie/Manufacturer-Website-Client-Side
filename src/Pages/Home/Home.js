@@ -15,7 +15,9 @@ const Home = () => {
       <BusinessSummary></BusinessSummary>
       <MidCard></MidCard>
       <ContactUs></ContactUs>
+
       <Info></Info>
+
       <Footer></Footer>
     </div>
   );
