@@ -6,6 +6,7 @@ import ContactUs from "./ContactUs";
 import Info from "./Info";
 import MidCard from "./MidCard";
 import Products from "./Products";
+import Reviews from "./Reviews";
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
       <BusinessSummary></BusinessSummary>
       <MidCard></MidCard>
       <ContactUs></ContactUs>
-
+      <Reviews></Reviews>
       <Info></Info>
 
       <Footer></Footer>

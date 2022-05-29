@@ -14,7 +14,6 @@ const Purchase = () => {
 
   const { _id, name, img, description, minimumOrder, available, price } = item;
 
-  //getting the item's info
   useEffect(() => {
     fetch(`http://localhost:5000/item/${id}`)
       .then((res) => res.json())
@@ -65,7 +64,7 @@ const Purchase = () => {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        // authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
+        authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
       },
       body: JSON.stringify(orderSummary),
     })
@@ -73,7 +72,7 @@ const Purchase = () => {
       .then((data) => {
         console.log(data);
         if (data.acknowledged) {
-          toast.success("Order Placed Successfully");
+          toast("Order Placed Successfully");
         }
       });
 

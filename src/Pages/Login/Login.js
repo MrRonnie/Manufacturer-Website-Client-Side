@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
@@ -6,7 +6,8 @@ import {
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useJWT from "../../Hooks/useJWT";
 
 const Login = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -16,16 +17,26 @@ const Login = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
+  const [token] = useJWT(user || googleUser);
+
   let singInError;
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+
+  useEffect(() => {
+    if (token) {
+      navigate(from, { replace: true });
+    }
+  }, [token, from, navigate]);
 
   if (loading || googleLoading) {
     return <Loading></Loading>;
   }
-
   if (error || googleError) {
     singInError = (
       <p className="text-red-500 text-sm m-1">
@@ -33,16 +44,9 @@ const Login = () => {
       </p>
     );
   }
-
-  if (user || googleUser) {
-    console.log(user, googleUser);
-  }
-
   const onSubmit = (data) => {
-    console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
   };
-
   return (
     <div className="flex h-screen justify-center items-center">
       <div className="card w-96 bg-base-100 shadow-xl">

@@ -8,6 +8,7 @@ import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 import { Link, useNavigate } from "react-router-dom";
+import useJWT from "../../Hooks/useJWT";
 
 const SingUp = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -22,6 +23,8 @@ const SingUp = () => {
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+  const [token] = useJWT(user || googleUser);
+
   const navigate = useNavigate();
 
   let singInError;
@@ -30,15 +33,16 @@ const SingUp = () => {
     return <Loading></Loading>;
   }
 
+  if (token) {
+    // navigate("/");
+  }
+
   if (error || googleError || updateError) {
     singInError = (
       <p className="text-red-500 text-sm m-1">
         {error?.message || googleError?.message || updateError.message}
       </p>
     );
-  }
-  if (user || googleUser) {
-    console.log(user, googleUser);
   }
 
   const onSubmit = async (data) => {
