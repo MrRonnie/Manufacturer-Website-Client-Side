@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 
 const MakeAdminRow = ({ user, name, index, refetch }) => {
   const makeAdmin = () => {
-    const url = `http://localhost:5000/user/${user.email}`;
+    const url = `https://rocky-dawn-14713.herokuapp.com/user/${user.email}`;
 
     fetch(url, {
       method: "PATCH",

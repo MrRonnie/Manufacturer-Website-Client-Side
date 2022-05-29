@@ -18,7 +18,7 @@ const Payment = () => {
     refetch,
     isLoading,
   } = useQuery(["order", id], () =>
-    fetch(`http://localhost:5000/oneOrder/${id}`, {
+    fetch(`https://rocky-dawn-14713.herokuapp.com/oneOrder/${id}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("jwtToken")}`,

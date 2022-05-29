@@ -19,7 +19,6 @@ import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
 import ManageProducts from "./Pages/Dashboard/ManageProducts";
 import AddReview from "./Pages/Dashboard/AddReview";
 import Payment from "./Pages/Payment/Payment";
-import { ToastContainer } from "react-toastify";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 
 function App() {
@@ -65,8 +64,6 @@ function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-
-      <ToastContainer></ToastContainer>
     </div>
   );
 }

@@ -14,7 +14,7 @@ const AddReview = () => {
       rating: e.target.rating.value,
     };
 
-    fetch("http://localhost:5000/feedbacks", {
+    fetch("https://rocky-dawn-14713.herokuapp.com/feedbacks", {
       method: "POST",
       headers: {
         "content-type": "application/json",

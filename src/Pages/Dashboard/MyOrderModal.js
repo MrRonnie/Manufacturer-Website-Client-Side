@@ -5,7 +5,7 @@ const MyOrderModal = ({ refetch, deleteOrder, setDeleteOrder }) => {
   const { itemName, orderQuantity, _id } = deleteOrder;
 
   const deleteItem = () => {
-    fetch(`http://localhost:5000/order/${_id}`, {
+    fetch(`https://rocky-dawn-14713.herokuapp.com/order/${_id}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${localStorage.getItem("jwtToken")}`,

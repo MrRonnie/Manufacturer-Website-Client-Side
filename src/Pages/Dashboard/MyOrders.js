@@ -9,7 +9,7 @@ import MyOrderRow from "./MyOrderRow";
 const MyOrders = () => {
   const [deleteOrder, setDeleteOrder] = useState(null);
   const [user, loading] = useAuthState(auth);
-  const url = `http://localhost:5000/order?email=${user?.email}`;
+  const url = `https://rocky-dawn-14713.herokuapp.com/order?email=${user?.email}`;
 
   const {
     data: myOrders,

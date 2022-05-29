@@ -37,7 +37,7 @@ const AddAProduct = () => {
             price,
           };
 
-          fetch("http://localhost:5000/product", {
+          fetch("https://rocky-dawn-14713.herokuapp.com/product", {
             method: "POST",
             headers: {
               "content-type": "Application/json",

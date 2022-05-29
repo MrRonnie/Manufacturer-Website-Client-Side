@@ -8,7 +8,7 @@ import Loading from "../Shared/Loading";
 const MyProfile = () => {
   const [isEdit, setIsEdit] = useState(false);
   const [user] = useAuthState(auth);
-  const url = `http://localhost:5000/user/${user?.email}`;
+  const url = `https://rocky-dawn-14713.herokuapp.com/user/${user?.email}`;
   const { data, isLoading, refetch } = useQuery("userInfo", () =>
     fetch(url).then((res) => res.json())
   );
@@ -31,7 +31,7 @@ const MyProfile = () => {
       linkedIn,
     };
 
-    fetch(`http://localhost:5000/user/${user.email}`, {
+    fetch(`https://rocky-dawn-14713.herokuapp.com/user/${user.email}`, {
       method: "PUT",
       headers: {
         "content-type": "Application/json",

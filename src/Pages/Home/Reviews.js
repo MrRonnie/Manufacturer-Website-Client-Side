@@ -5,7 +5,9 @@ import quote from "../../assets/icons/quote.svg";
 
 const Reviews = () => {
   const { data: feedbacks, refetch } = useQuery("feedbacks", () =>
-    fetch("http://localhost:5000/feedbacks").then((res) => res.json())
+    fetch("https://rocky-dawn-14713.herokuapp.com/feedbacks").then((res) =>
+      res.json()
+    )
   );
 
   return (

@@ -5,7 +5,7 @@ const AdminOrderDeleteModal = ({ order, refetch, setDeleteOrder }) => {
   const { _id, email, itemName } = order;
 
   const deleteUnpaidOrder = () => {
-    fetch(`http://localhost:5000/order/${_id}`, {
+    fetch(`https://rocky-dawn-14713.herokuapp.com/order/${_id}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${localStorage.getItem("jwtToken")}`,

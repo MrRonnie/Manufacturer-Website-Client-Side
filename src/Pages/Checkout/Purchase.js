@@ -15,7 +15,7 @@ const Purchase = () => {
   const { _id, name, img, description, minimumOrder, available, price } = item;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/item/${id}`)
+    fetch(`https://rocky-dawn-14713.herokuapp.com/item/${id}`)
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, [id]);
@@ -60,7 +60,7 @@ const Purchase = () => {
     };
     console.log(orderSummary);
 
-    fetch("http://localhost:5000/order", {
+    fetch("https://rocky-dawn-14713.herokuapp.com/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",

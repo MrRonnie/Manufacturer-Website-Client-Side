@@ -25,7 +25,7 @@ const ManageAllOrdersRow = ({ order, index, refetch, setDeleteOrder }) => {
   }, [status]);
 
   const updateStatus = () => {
-    fetch(`http://localhost:5000/updateToShipped/${_id}`, {
+    fetch(`https://rocky-dawn-14713.herokuapp.com/updateToShipped/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "Application/json",

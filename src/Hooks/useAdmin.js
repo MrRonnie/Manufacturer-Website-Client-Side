@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const useAdmin = (email) => {
   const [isAdmin, setIsAdmin] = useState(null);
-  const url = `http://localhost:5000/admin/${email}`;
+  const url = `https://rocky-dawn-14713.herokuapp.com/admin/${email}`;
 
   useEffect(() => {
     if (email) {

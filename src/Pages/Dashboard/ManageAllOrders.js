@@ -11,7 +11,7 @@ const ManageAllOrders = () => {
     isLoading,
     refetch,
   } = useQuery("allOrder", () =>
-    fetch("http://localhost:5000/orders", {
+    fetch("https://rocky-dawn-14713.herokuapp.com/orders", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
